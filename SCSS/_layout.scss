@@ -1,0 +1,226 @@
+.container{
+    max-width: 1024px;
+    padding-top: 30px;
+    margin: 0 auto;
+    font-family:$textF;
+    @include mobile(){
+        width: 100%;
+    }
+}
+.header{
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+    position: relative;
+    @include mobile(){
+        justify-content: space-around;
+        width: 100%;
+    }
+    h1{
+        a{
+            display: block;
+            width: 210px;
+            height: 40px;
+            background-image:url("../image/logo-all-dark.svg");
+            @include hide_text;
+            @include mobile(){
+                width: 114px;
+                height: 18px;
+                background-image: url("../image/logotype-sm-dark.svg");
+                background-repeat: no-repeat;
+            }
+        }
+    }
+    .optionsCart{
+        display: flex;
+        .cart{ 
+            background-image: url("../image/shopping_cart.png");
+            display:block;
+            width: 24px;
+            height: 24px;
+            @include hide_text;
+            margin-left: 79px;
+            @include mobile(){
+                margin-left: 0px;
+            }
+        }
+        .active{
+            max-height: 125px;
+        }
+    }
+    .options{
+        display: flex;
+        @include mobile(){
+            position: absolute;
+            z-index: 30;
+            left: 0;
+            top: 100%;
+            width: 100%;
+            transition: all 0.8s;
+            overflow: hidden;
+            background: $white; 
+            flex-direction: column;
+            max-height: 0px;
+        }
+        li{
+            a{
+                color: $colorDark;
+                text-decoration: none;
+                font-size: $text_S;
+                line-height: $text_S*1.4;
+                text-align: left;
+                font-weight: bold;
+                margin-left: 60px;
+                @include mobile(){
+                    display: block;
+                    font-size: $text_S_mobile;
+                    text-align: center;
+                    padding: 10px 0px;
+                    margin-left: 0px;
+                }
+            }
+            a:hover{
+                background-color: $colorLight;
+            }
+        }
+    }
+    .burgerMenu{
+        display: none;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        @include mobile(){
+            display: inline;
+        }
+    }
+}
+.footer{
+    // font-family:Microsoft JhengHei;
+    .footerDark{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        background-color: $colorDark;
+        padding: 30px 6%;
+        @include mobile(){
+            flex-direction: column;
+        }
+        .LogoandText{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            .logo_light{
+                width: 40px;
+                margin-right: 20px;
+            }
+            p{
+                font-size: $text_L;
+                line-height: $text_L*1.4;
+                color: $colorLight;
+            }
+        }
+        .mail_part{
+            display: flex;
+            min-width: 380px;
+            @include mobile(){
+                margin-top: 30px;
+                min-width: 315px;
+            }
+            .mail_logo{
+                display: block;
+                padding: 16px 20px;
+                border: 1px solid transparent;
+                background-color:$white;
+            }
+            .mail{
+                border: 1px solid transparent;
+                width: 100%;
+            }
+            button{
+                padding: 20px 24px;
+                background-color: $mail_button_color;
+                border: 1px solid transparent;
+                cursor: pointer;
+            }
+            button:hover{
+                background-color:$mail_button_hover;
+            }
+        }
+    }
+    .footerLight{
+        background-color: $colorLight;
+        padding: 30px 6%;
+        display: flex;
+        justify-content: space-between;
+        @include mobile(){
+            flex-direction: column;
+        }
+        .information{
+            img{
+                display: block;
+                width: 171px;
+                margin-top: 10px;
+                margin-bottom: 115px;
+                @include mobile(){
+                    margin-bottom: 40px;
+                }
+            }
+            p{
+                font-size: $text_S;
+                line-height: $text_S*1.4;
+                color: $colorDark;
+            }
+            .icon{
+                display: flex;
+                margin-top: 30px;
+                @include mobile(){
+                    margin-top: 37px;
+                }
+                .line{
+                    background-image: url("../image/ic-line@.svg");
+                    @include hide_text;
+                    display: block;
+                    width: 32px;
+                    height: 32px;
+                    margin-right: 8px;
+                }
+                .fb{
+                    background-image: url("../image/ic-facebook.svg");
+                    @include hide_text;
+                    display: block;
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+        }
+        .text{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            color: $colorDark;
+            @include mobile(){
+                margin-top: 23px;
+            }
+            h2{
+                writing-mode: vertical-rl;
+                font-size: $text_L;
+                letter-spacing: 6px;
+                line-height: $text_L*1.4;
+                font-weight: bolder;
+                font-family: $text_footer_h2;                ;
+                text-indent: -10px;
+                margin-top: 10px;
+                @include mobile(){
+                    display: none;
+                }
+            }
+            p{
+                font-size: $text_S;
+            }
+        }
+    }
+}
