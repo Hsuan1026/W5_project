@@ -1,0 +1,183 @@
+.banner{
+    display: block;
+    width: 90%;
+    margin: 0 auto 60px auto;
+    @include mobile(){
+        margin-bottom: 0px;
+        width: 100%;
+    }
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+    @include mobile(){
+        width: 100%;
+    }
+    .category{
+        width: 32%;
+        font-size: $text_L;
+        line-height: $text_L*1.4;
+        font-weight: bold;
+        @include mobile(){
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        h2{
+            padding: 16px 0px;
+            background-color: $colorDark;
+            color: $colorLight;
+            text-align: center;
+        }
+        .border{
+            border-right: 1px solid $colorLight;
+            border-left: 1px solid $colorLight;
+            border-bottom: 1px solid $colorLight;
+        }
+        a{
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            padding: 16px 0px;
+            color: $colorDark;
+        }
+        a:hover{
+            background-color: $colorLight;
+        }
+    }
+    .dessert{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 66%;
+        @include mobile(){
+            width: 100%;
+            justify-content: center;
+        }
+        li{
+            width: 48.5%;
+            margin-bottom: 20px;
+            position: relative;
+            @include mobile(){
+                width: 85%;
+                margin-bottom: 30px;
+            }
+            img{
+                @include mobile(){
+                    width: 100%;
+                }
+            }
+        }
+        .name_money{
+            display: flex;
+            align-items: center;
+            color:$colorDark;
+            font-size: $text_M;
+            font-weight: bold;
+            line-height: $text_M*1.4;
+            border-left: 1px solid $colorLight;
+            border-right: 1px solid $colorLight;
+            h2{
+                padding: 14px 33px;
+                border-right: 1px solid $colorLight;
+                font-weight: initial;
+                text-align: center;
+                width: 60%;
+            }
+            p{
+                text-align: center;
+                width: 40%;
+            }
+        }
+        .add_cart{
+            display: block;
+            background-color: $colorLight;
+            border: 1px solid $colorLight;
+            text-decoration: none;
+            font-size: $text_L;
+            color: $colorDark;
+            font-weight: bold;
+            text-align: center;
+            line-height: $text_L*1.4;
+            padding: 16px 0px;
+        }
+        .add_cart:hover{
+            background-color: $colorDark;
+            color: $colorLight;
+        }
+        .special{
+            position: absolute;
+            padding: 10px;
+            top: 0;
+            left: 20px;
+            font-size: $text_S;
+            background-color: $colorDark;
+            color: $white;
+            line-height: $text_S*1.4;
+            letter-spacing: 6px;
+            font-weight: bold;
+            writing-mode: vertical-rl;
+        }
+        .like{
+            background-image: url("../image/favorite_border.png");
+            display: block;
+            text-indent: 101%;
+            overflow: hidden;
+            word-spacing: nowrap;
+            position: absolute;
+            right: 22px;
+            top: 19px;
+            width: 20px;
+            height: 18.35px;
+        }
+    }
+}
+.page{
+    display: flex;
+	justify-content: flex-end;
+    width: 90%;
+    margin: 0 auto 60px auto;
+    @include mobile(){
+        justify-content: center;
+	    margin-bottom: 30px;
+    }
+    td{
+        border: 1px solid $colorLight;
+        a{
+            display: block;
+            color: $colorDark;
+            width: 59px;
+            font-size: $text_M;
+            line-height: $text_M*1.4;
+            text-decoration: none;
+            padding: 16px 0px;
+            text-align: center;
+        }
+        a:hover{
+            background-color: $colorDark;
+            color: $white;
+        }
+    }
+    .arrow_left{
+        @include hide_text;
+        background-repeat: no-repeat;
+        background-image: url("../image/arrow_left.png");
+        background-position: center;
+    }
+    .arrow_left:hover{
+        background-color: $white;
+	    border: 1px solid $colorDark;
+    }
+    .arrow_right{
+        @include hide_text;
+        background-repeat: no-repeat;
+        background-image: url("../image/arrow_right.png");
+        background-position: center;
+    }
+    .arrow_right:hover{
+        background-color: $white;
+	    border: 1px solid $colorDark;
+    }
+}
